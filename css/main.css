@@ -25,9 +25,15 @@ a {
   padding-top: 10px;
   padding-left: 10px;
   padding-right: 10px;
+  padding-bottom: 10px;
   display: flex;
   column-gap: 15px;
   align-items: center;
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 1;
 }
 
 .logo {
@@ -53,16 +59,28 @@ a {
 }
 .card {
   display: flex;
-  justify-content: center;
-  /* border: 2px solid gray; */
-  background-color: #eee;
-
-  min-height: 200px;
+  flex-direction: column;
   align-items: center;
+  /* background-color: #eee; */
+  /* outline: 1px solid black; */
 }
 .card img {
-  height: 100%;
-  /* width: 100%; */
-  /* object-fit: contain; */
-  /* width: auto; */
+  max-width: 100%; /* Prevents image from exceeding container */
+  max-height: 100%; /* Optional: If container has fixed height */
+  height: auto; /* Maintains aspect ratio */
+  display: block; /* Removes extra space below image */
+}
+.card p {
+  /* font-size: clamp(1rem, 1rem + 1vw, 1rem); */
+  max-width: 240px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  position: relative;
+  top: -30px;
+}
+@media (max-width: 708px) {
+  .cards {
+    font-size: 14px;
+  }
 }
