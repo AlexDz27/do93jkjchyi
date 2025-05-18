@@ -44,7 +44,11 @@ a {
 }
 
 .main {
+  display: none !important;
   padding-top: 10px;
+}
+.main--active {
+  display: grid !important;
 }
 
 .cards {
@@ -84,4 +88,11 @@ a {
   .cards {
     font-size: 14px;
   }
+}
+
+.section {
+  display: none;
+}
+.section--active {
+  display: block;
 }
