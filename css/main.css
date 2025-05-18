@@ -133,6 +133,22 @@ a {
   }
 }
 
+.slider {
+  overflow-x: hidden;
+}
+.slider__track {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-auto-flow: column;
+  grid-auto-columns: 100%;
+  /* column-gap: 20px; */
+}
+.slide {
+  min-height: 400px;
+  padding: 20px;
+  background-color: #eee;
+}
+
 /** LAYOUT **/
 .l-mb-1 {
   margin-bottom: 38px;
