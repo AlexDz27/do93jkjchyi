@@ -101,6 +101,8 @@ a {
   /* position: relative;
   top: -169px; */
   margin-top: -139px;
+  position: relative;
+  z-index: 10;
 }
 @media (max-width: 575px) {
   .content {
@@ -142,11 +144,12 @@ a {
   grid-auto-flow: column;
   grid-auto-columns: 100%;
   /* column-gap: 20px; */
+  transition: transform 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 .slide {
-  min-height: 400px;
+  /* min-height: 400px;
   padding: 20px;
-  background-color: #eee;
+  background-color: #eee; */
 }
 
 /** LAYOUT **/

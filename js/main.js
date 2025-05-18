@@ -30,3 +30,32 @@ for (const sneaker of sneakers) {
     contentPrice.innerText = datum.price
   }
 }
+
+/** SLIDER **/
+const track = document.getElementById('track')
+// const btnPrev = document.getElementById('btnPrev')
+// const btnNext = document.getElementById('btnNext')
+// btnPrev.onclick = () => {
+//   track.style.transform = `translate3d(0, 0, 0)`
+// }
+// btnNext.onclick = () => {
+//   track.style.transform = `translate3d(-100%, 0, 0)`
+// }
+
+let touchStartX = 0
+let touchEndX = 0
+let threshold = 50
+track.addEventListener('touchstart', (e) => {
+  touchStartX = e.changedTouches[0].screenX
+}, {passive: true})
+track.addEventListener('touchend', (e) => {
+  touchEndX = e.changedTouches[0].screenX
+  const difference = touchStartX - touchEndX;
+    if (difference > threshold) {
+      // Swipe left - go to next slide
+      track.style.transform = `translate3d(-100%, 0, 0)`
+    } else if (difference < -threshold) {
+      // Swipe right - go to previous slide
+      track.style.transform = `translate3d(0, 0, 0)`
+    }
+}, {passive: true})
