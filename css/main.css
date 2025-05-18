@@ -96,3 +96,47 @@ a {
 .section--active {
   display: block;
 }
+
+.content {
+  /* position: relative;
+  top: -169px; */
+  margin-top: -139px;
+}
+@media (max-width: 575px) {
+  .content {
+    margin-top: -27%;
+  }
+}
+.content-img {
+  max-width: 100%; /* Prevents image from exceeding container */
+  max-height: 100%; /* Optional: If container has fixed height */
+  height: auto; /* Maintains aspect ratio */
+  display: block; /* Removes extra space below image */
+}
+.content-title {
+  font-weight: 300;
+}
+.content-btn {
+  border: none;
+  /* background-color: rgb(236, 192, 255); */
+  background-color: rgb(169, 59, 216);
+  font-size: inherit;
+  cursor: pointer;
+  padding: 10px;
+  min-width: 280px;
+  color: white;
+  border-radius: 13px;
+}
+@media (max-width: 755px) {
+  .content-btn {
+    width: 100%;
+  }
+}
+
+/** LAYOUT **/
+.l-mb-1 {
+  margin-bottom: 38px;
+}
+.l-mb-2 {
+  margin-bottom: 100px;
+}
