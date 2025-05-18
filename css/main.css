@@ -61,6 +61,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
   /* background-color: #eee; */
   /* outline: 1px solid black; */
 }
